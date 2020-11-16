@@ -100,6 +100,8 @@
 @import "mixins";
 
 body {
+    background: $black;
+    color: $white;
     font-family: $body-font;
 }
 h1 {
@@ -203,12 +205,15 @@ header {
         nav {
             a:link,
             a:visited {
+                color: $white;
                 margin-left: 10px;
                 text-decoration: none;
                 text-transform: lowercase;
                 &:hover {
                     @include gradient-border-bottom;
+                    color: $yellow;
                     transition: 1s background-image;
+                    transition: 1s color;
                 }
             }
             .active {
@@ -226,13 +231,13 @@ header {
         /* simery circle */ 
         #simery-circle {
             .simery-span {
-                background: $black;
+                background: $pink;
                 border-radius: 200px;
                 height: 200px;
                 margin: 0 auto;
                 width: 200px;
                 .simery-span-content {
-                    color: $white;
+                    color: $black;
                     margin-top: 40px;
                     padding-top: 60px;
                     line-height: 1rem;
@@ -346,7 +351,9 @@ header {
     }
     /* blog posts */ 
     .blog-posts-single {
+        padding-bottom: 50px;
         h1 {
+            @include reverse-gradient-border-bottom;
             font-size: 2rem;
             line-height: 1.75rem;
             text-transform: lowercase;
@@ -431,8 +438,10 @@ footer {
     }
     form {
         input {
+            background: $black;
             border: 2px solid $pink;
             border-radius: 5px;
+            color: $white;
         }
         input[type="submit"] {
             background: none;
@@ -440,6 +449,7 @@ footer {
             &:hover {
                 background: $yellow;
                 border: 2px solid $yellow;
+                color: $black;
                 transition: 1s background-color;
             }
         }
@@ -485,6 +495,11 @@ footer {
                 }
             }
         }
+    }
+    /* desktop blog posts */ 
+    #blog-content {
+        display: flex;
+        flex-flow: row nowrap;
     }
 }
   /* ==========================================================================
