@@ -1,0 +1,653 @@
+/*! HTML5 Boilerplate v7.3.0 | MIT License | https://html5boilerplate.com/ */
+
+/* main.css 2.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+   html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+  }
+  
+  /*
+   * Remove text-shadow in selection highlight:
+   * https://twitter.com/miketaylr/status/12228805301
+   *
+   * Vendor-prefixed and regular ::selection selectors cannot be combined:
+   * https://stackoverflow.com/a/16982510/7133471
+   *
+   * Customize the background color to match your design.
+   */
+  
+  ::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+  }
+  
+  ::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+  }
+  
+  /*
+   * A better looking default horizontal rule
+   */
+  
+  hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+  }
+  
+  /*
+   * Remove the gap between audio, canvas, iframes,
+   * images, videos and the bottom of their containers:
+   * https://github.com/h5bp/html5-boilerplate/issues/440
+   */
+  
+  audio,
+  canvas,
+  iframe,
+  img,
+  svg,
+  video {
+    vertical-align: middle;
+  }
+  
+  /*
+   * Remove default fieldset styles.
+   */
+  
+  fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /*
+   * Allow only vertical resizing of textareas.
+   */
+  
+  textarea {
+    resize: vertical;
+  }
+  
+  /* ==========================================================================
+     Browser Upgrade Prompt
+     ========================================================================== */
+  
+  .browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+  }
+  
+/* universal */ 
+@import "colors";
+@import "fonts";
+@import "mixins";
+
+body {
+    font-family: $body-font;
+}
+h1 {
+    font-family: $heading-font;
+    font-weight: $bold;
+}
+h2 {
+    font-family: $body-font;
+    font-weight: $light;
+}
+h3,
+h4 {
+    font-family: $heading-font;
+    font-weight: $regular;
+}
+.content-wrapper {
+    @include content-wrapper;
+}
+/* home page */ 
+.body-home {
+    background: $pink;
+}
+#home-page {
+    margin-top: 50px;
+    .simery-span {
+        background: $black;
+        border-radius: 300px;
+        height: 300px;
+        margin: 0 auto;
+        width: 300px;
+        .simery-span-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            h1 {
+                color: $white;
+                font-size: 3rem;
+                margin-top: 80px;
+                line-height: 1rem;
+                text-transform: lowercase;
+                text-align:center;
+                padding-bottom:30px;
+                background: /* gradient can be an image */
+                  $reverse-pink-to-blue-gradient
+                  bottom 
+                  $black    
+                  no-repeat; 
+                background-size:70% 5px ;/* if linear-gradient, we need to resize it */
+            }
+            h2 {
+                display: none;
+            }
+            .button-container {
+                background: $pink-to-blue-gradient;
+                width: 100px;
+                padding: 5px;
+                text-align: center;
+                a:link,
+                a:visited {
+                    color: $black;
+                    font-weight: $black-font;
+                    text-align: center;
+                    text-transform: uppercase;
+                    text-decoration: none;
+                }
+                &:hover {
+                    width: 150px;
+                    transition: 1s width;
+                }
+                &:not(:hover) {
+                    transition: 1s width;
+                }
+            }
+        }
+        .footer-social-media {
+            display: flex;
+            color: $yellow;
+            flex-flow: row nowrap;
+            align-items: center;
+            justify-content: space-between;
+            margin: 0 auto;
+            padding-top: 20px;
+            width: 40%;
+            i:hover {
+                color: $pink;
+                transition: .5s color;
+            }
+        }
+    }
+}
+/* blog page */ 
+/* navigation */ 
+header {
+    font-size: 1.25rem;
+    padding-top: 20px;
+    .content-wrapper {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        nav {
+            a:link,
+            a:visited {
+                margin-left: 10px;
+                text-decoration: none;
+                text-transform: lowercase;
+                &:hover {
+                    @include gradient-border-bottom;
+                    transition: 1s background-image;
+                }
+            }
+            .active {
+                @include reverse-gradient-border-bottom;
+            }
+        }
+    }
+}
+/* blog content */ 
+#blog-content {
+    display: flex;
+    flex-direction: column-reverse;
+    /* sidebar */
+    .sidebar {
+        /* simery circle */ 
+        #simery-circle {
+            .simery-span {
+                background: $black;
+                border-radius: 200px;
+                height: 200px;
+                margin: 0 auto;
+                width: 200px;
+                .simery-span-content {
+                    color: $white;
+                    margin-top: 40px;
+                    padding-top: 60px;
+                    line-height: 1rem;
+                    text-transform: lowercase;
+                    text-align:center;
+                    padding-bottom:5px;
+                    background: /* gradient can be an image */
+                    $reverse-pink-to-blue-gradient
+                    bottom 
+                    no-repeat; 
+                    background-size:50% 5px ;/* if linear-gradient, we need to resize it */
+                }
+            }
+        }
+        .sidebar-bio {
+            .content-wrapper {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                margin-top: 50px;
+                img {
+                    border-radius: 100px;
+                    width: 100px;
+                    height: 100px;
+                }
+                h2 {
+                    line-height: 1.75rem;
+                    text-transform: lowercase;
+                    margin: 0;
+                    span {
+                        @include gradient-border-bottom;
+                    }
+                }
+                h3 {
+                    line-height: 1.25rem;
+                    margin-top: 10px;
+                    text-transform: lowercase;
+                }
+            }
+
+        }
+        .sidebar-latest-posts {
+            h2 {
+                @include reverse-gradient-border-bottom;
+                text-transform: lowercase;
+                text-align: center;
+            }
+            .sidebar-latest-posts-container {
+                h3 {
+                    font-weight: $bold;
+                    margin: 0;
+                    text-transform: lowercase;
+                }
+                p {
+                    @include reverse-gradient-border-bottom;
+                    background-position: left;
+                    background-size: 50% 5px;
+                    padding-bottom: 25px;
+                    margin: 0;
+                }
+            }
+        }
+        .popular-tags {
+            .sidebar-tags {
+                display: flex;
+                align-items: center;
+                flex-flow: row wrap;
+                text-transform: lowercase;
+                h3 {
+                    margin: 0;
+                }
+                a:link,
+                a:visited {
+                    color: $black;
+                    font-weight: $black-font;
+                    padding: 5px;
+                    margin: 5px 5px 2px 0px;
+                    text-decoration: none;
+                    text-transform: lowercase;
+                    &:nth-of-type(even) {
+                        background: $pink;
+                        &:hover {
+                            background: $blue;
+                            transition: 1s background-color;
+                        }
+                    }
+                    &:nth-of-type(odd) {
+                        background: $yellow;
+                        &:hover {
+                            background: $blue;
+                            transition: 1s background-color;
+                        }
+                    }
+                }
+            }
+
+        }
+        .sidebar-social-media {
+            width: 250px;
+            display: flex;
+            justify-content: space-around;
+            i {
+                color: $yellow;
+                &:hover {
+                    color: $pink;
+                    transition: 1s color;
+                }
+            }
+        }
+    }
+    /* blog posts */ 
+    .blog-posts-single {
+        h1 {
+            font-size: 2rem;
+            line-height: 1.75rem;
+            text-transform: lowercase;
+        }
+        .blog-post-author-info {
+            display: flex;
+            align-items: center;
+            img {
+                border-radius: 100px;
+                margin-right: 15px;
+                width: 100px;
+                height: 100px;
+            }
+            h3 {
+                font-weight: $bold;
+                font-size: .75rem;
+                line-height: 1rem;
+                margin: 0;
+                text-transform: lowercase;
+                span {
+                    display: inline-block;
+                    font-weight: $regular;
+                }
+                &:nth-of-type(4) {
+                    color: $yellow;
+                }
+            }
+            i {
+                line-height: .5rem;
+            }
+        }
+        /* music player */ 
+        iframe {
+            margin: 10px 0px;
+        }
+        /* posts tags container */ 
+        .blog-post-post-tags-container {
+            display: flex;
+            align-items: center;
+            flex-flow: row wrap;
+            text-transform: lowercase;
+            h3 {
+                margin: 0;
+            }
+            a:link,
+            a:visited {
+                color: $black;
+                font-weight: $black-font;
+                margin: 5px;
+                padding: 5px;
+                text-decoration: none;
+                text-transform: lowercase;
+                &:nth-of-type(even) {
+                    background: $pink;
+                    &:hover {
+                        background: $blue;
+                        transition: 1s background-color;
+                    }
+                }
+                &:nth-of-type(odd) {
+                    background: $yellow;
+                    &:hover {
+                        background: $blue;
+                        transition: 1s background-color;
+                    }
+                }
+            } 
+        }
+    }
+
+}
+/* footer */ 
+footer {
+    margin: 35px 0px;
+    .footer-content {
+        display: flex;
+        justify-content: space-between;
+    }
+    h1 {
+        text-transform: lowercase;
+        margin: 0;
+    }
+    form {
+        input {
+            border: 2px solid $pink;
+            border-radius: 5px;
+        }
+        input[type="submit"] {
+            background: none;
+            text-transform: lowercase;
+            &:hover {
+                background: $yellow;
+                border: 2px solid $yellow;
+                transition: 1s background-color;
+            }
+        }
+    }
+    .footer-social-media {
+        i {
+            color: $yellow;
+            margin-left: 10px;
+            &:hover {
+                color: $pink;
+            }
+        }
+    }
+}
+/* desktop styles */ 
+@media screen and (min-width: 768px) {
+    /* desktop home page */ 
+    #home-page {
+        .simery-span {
+            border-radius: 600px;
+            width: 600px;
+            height: 600px;
+            .simery-span-content {
+                h1 {
+                    font-size: 6rem;
+                    padding-bottom: 60px;
+                    background-size: 70% 10px;
+                    margin-top: 180px;
+                    margin-bottom: 0px;
+                }
+                h2 {
+                    display: block;
+                    color: $white;
+                    width: 70%;
+                    text-transform: lowercase;
+                    text-align: center;
+                }
+                .button-container {
+                    width: 200px;
+                    &:hover {
+                        width: 300px;
+                    }
+                }
+            }
+        }
+    }
+}
+  /* ==========================================================================
+     Helper classes
+     ========================================================================== */
+  
+  /*
+   * Hide visually and from screen readers
+   */
+  
+  .hidden {
+    display: none !important;
+  }
+  
+  /*
+  * Hide only visually, but have it available for screen readers:
+  * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+  *
+  * 1. For long content, line feeds are not interpreted as spaces and small width
+  *    causes content to wrap 1 word per line:
+  *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+  */
+  
+  .sr-only {
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    /* 1 */
+  }
+  
+  /*
+  * Extends the .sr-only class to allow the element
+  * to be focusable when navigated to via the keyboard:
+  * https://www.drupal.org/node/897638
+  */
+  
+  .sr-only.focusable:active,
+  .sr-only.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    white-space: inherit;
+    width: auto;
+  }
+  
+  /*
+  * Hide visually and from screen readers, but maintain layout
+  */
+  
+  .invisible {
+    visibility: hidden;
+  }
+  
+  /*
+  * Clearfix: contain floats
+  *
+  * For modern browsers
+  * 1. The space content is one way to avoid an Opera bug when the
+  *    `contenteditable` attribute is included anywhere else in the document.
+  *    Otherwise it causes space to appear at the top and bottom of elements
+  *    that receive the `clearfix` class.
+  * 2. The use of `table` rather than `block` is only necessary if using
+  *    `:before` to contain the top-margins of child elements.
+  */
+  
+  .clearfix:before,
+  .clearfix:after {
+    content: " ";
+    /* 1 */
+    display: table;
+    /* 2 */
+  }
+  
+  .clearfix:after {
+    clear: both;
+  }
+  
+  /* ==========================================================================
+     EXAMPLE Media Queries for Responsive Design.
+     These examples override the primary ('mobile first') styles.
+     Modify as content requires.
+     ========================================================================== */
+  
+  @media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+  }
+  
+  @media print,
+    (-webkit-min-device-pixel-ratio: 1.25),
+    (min-resolution: 1.25dppx),
+    (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+  }
+  
+  /* ==========================================================================
+     Print styles.
+     Inlined to avoid the additional HTTP request:
+     https://www.phpied.com/delay-loading-your-print-css/
+     ========================================================================== */
+  
+  @media print {
+    *,
+    *:before,
+    *:after {
+      background: transparent !important;
+      color: #000 !important;
+      /* Black prints faster */
+      box-shadow: none !important;
+      text-shadow: none !important;
+    }
+    a,
+    a:visited {
+      text-decoration: underline;
+    }
+    a[href]:after {
+      content: " (" attr(href) ")";
+    }
+    abbr[title]:after {
+      content: " (" attr(title) ")";
+    }
+    /*
+       * Don't show links that are fragment identifiers,
+       * or use the `javascript:` pseudo protocol
+       */
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+      content: "";
+    }
+    pre {
+      white-space: pre-wrap !important;
+    }
+    pre,
+    blockquote {
+      border: 1px solid #999;
+      page-break-inside: avoid;
+    }
+    /*
+       * Printing Tables:
+       * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
+       */
+    thead {
+      display: table-header-group;
+    }
+    tr,
+    img {
+      page-break-inside: avoid;
+    }
+    p,
+    h2,
+    h3 {
+      orphans: 3;
+      widows: 3;
+    }
+    h2,
+    h3 {
+      page-break-after: avoid;
+    }
+  }  
