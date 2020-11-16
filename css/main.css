@@ -200,23 +200,30 @@ header {
   /* blog posts */ }
   #blog-content .sidebar {
     /* simery circle */ }
-    #blog-content .sidebar #simery-circle .simery-span {
-      background: #D90368;
+    #blog-content .sidebar #simery-circle .simery-circle-border {
+      position: relative;
+      background: linear-gradient(to right, #D90368, #FFD400, #0091FF);
       border-radius: 200px;
-      height: 200px;
-      margin: 0 auto;
-      width: 200px; }
-      #blog-content .sidebar #simery-circle .simery-span .simery-span-content {
-        color: #0D070D;
-        margin-top: 40px;
-        padding-top: 60px;
-        line-height: 1rem;
-        text-transform: lowercase;
-        text-align: center;
-        padding-bottom: 5px;
-        background: linear-gradient(to right, #D90368, #FFD400, #0091FF) bottom no-repeat;
-        background-size: 50% 5px;
-        /* if linear-gradient, we need to resize it */ }
+      width: 230px;
+      height: 230px;
+      margin: 0 auto; }
+      #blog-content .sidebar #simery-circle .simery-circle-border .simery-span {
+        position: absolute;
+        background: #0D070D;
+        border-radius: 200px;
+        color: #f9f6f0;
+        height: 200px;
+        width: 200px; }
+        #blog-content .sidebar #simery-circle .simery-circle-border .simery-span .simery-span-content {
+          color: #f9f6f0;
+          padding-top: 60px;
+          line-height: 1rem;
+          text-transform: lowercase;
+          text-align: center;
+          padding-bottom: 5px;
+          background: linear-gradient(to right, #D90368, #FFD400, #0091FF) bottom no-repeat;
+          background-size: 50% 5px;
+          /* if linear-gradient, we need to resize it */ }
     #blog-content .sidebar .sidebar-bio .content-wrapper {
       display: flex;
       flex-direction: column;

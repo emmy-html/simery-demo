@@ -230,25 +230,33 @@ header {
     .sidebar {
         /* simery circle */ 
         #simery-circle {
-            .simery-span {
-                background: $pink;
+            .simery-circle-border {
+                position: relative;
+                background: $reverse-pink-to-blue-gradient;
                 border-radius: 200px;
-                height: 200px;
+                width: 230px;
+                height: 230px;
                 margin: 0 auto;
-                width: 200px;
-                .simery-span-content {
-                    color: $black;
-                    margin-top: 40px;
-                    padding-top: 60px;
-                    line-height: 1rem;
-                    text-transform: lowercase;
-                    text-align:center;
-                    padding-bottom:5px;
-                    background: /* gradient can be an image */
-                    $reverse-pink-to-blue-gradient
-                    bottom 
-                    no-repeat; 
-                    background-size:50% 5px ;/* if linear-gradient, we need to resize it */
+                .simery-span {
+                    position: absolute;
+                    background: $black;
+                    border-radius: 200px;
+                    color: $white;
+                    height: 200px;
+                    width: 200px;
+                    .simery-span-content {
+                        color: $white;
+                        padding-top: 60px;
+                        line-height: 1rem;
+                        text-transform: lowercase;
+                        text-align:center;
+                        padding-bottom:5px;
+                        background: /* gradient can be an image */
+                        $reverse-pink-to-blue-gradient
+                        bottom 
+                        no-repeat; 
+                        background-size:50% 5px ;/* if linear-gradient, we need to resize it */
+                    }
                 }
             }
         }
