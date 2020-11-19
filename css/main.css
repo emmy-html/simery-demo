@@ -191,6 +191,8 @@ header {
       background: linear-gradient(to right, #D90368, #FFD400, #0091FF) bottom no-repeat;
       background-size: 100% 5px;
       /* if linear-gradient, we need to resize it */ }
+    header .content-wrapper i:hover {
+      color: #FC4FA0; }
 
 /* blog content */
 #blog-content {
@@ -276,26 +278,25 @@ header {
         margin: 0; }
       #blog-content .sidebar .popular-tags .sidebar-tags a:link,
       #blog-content .sidebar .popular-tags .sidebar-tags a:visited {
+        background: #FC4FA0;
         color: #0D070D;
         font-weight: 900;
+        margin: 5px;
         padding: 5px;
-        margin: 5px 5px 2px 0px;
         text-decoration: none;
         text-transform: lowercase; }
-        #blog-content .sidebar .popular-tags .sidebar-tags a:link:nth-of-type(even),
-        #blog-content .sidebar .popular-tags .sidebar-tags a:visited:nth-of-type(even) {
-          background: #D90368; }
-          #blog-content .sidebar .popular-tags .sidebar-tags a:link:nth-of-type(even):hover,
-          #blog-content .sidebar .popular-tags .sidebar-tags a:visited:nth-of-type(even):hover {
-            background: #0091FF;
-            transition: 1s background-color; }
-        #blog-content .sidebar .popular-tags .sidebar-tags a:link:nth-of-type(odd),
-        #blog-content .sidebar .popular-tags .sidebar-tags a:visited:nth-of-type(odd) {
+        #blog-content .sidebar .popular-tags .sidebar-tags a:link:nth-of-type(2n+1),
+        #blog-content .sidebar .popular-tags .sidebar-tags a:visited:nth-of-type(2n+1) {
+          background: #0091FF; }
+        #blog-content .sidebar .popular-tags .sidebar-tags a:link:nth-of-type(3n+1),
+        #blog-content .sidebar .popular-tags .sidebar-tags a:visited:nth-of-type(3n+1) {
+          background: #FC4FA0; }
+        #blog-content .sidebar .popular-tags .sidebar-tags a:link:nth-of-type(4n+1),
+        #blog-content .sidebar .popular-tags .sidebar-tags a:visited:nth-of-type(4n+1) {
           background: #FFD400; }
-          #blog-content .sidebar .popular-tags .sidebar-tags a:link:nth-of-type(odd):hover,
-          #blog-content .sidebar .popular-tags .sidebar-tags a:visited:nth-of-type(odd):hover {
-            background: #0091FF;
-            transition: 1s background-color; }
+        #blog-content .sidebar .popular-tags .sidebar-tags a:link:hover,
+        #blog-content .sidebar .popular-tags .sidebar-tags a:visited:hover {
+          background: linear-gradient(to left, #D90368, #FFD400, #0091FF); }
     #blog-content .sidebar .sidebar-social-media {
       width: 250px;
       display: flex;
@@ -334,41 +335,48 @@ header {
         #blog-content .blog-posts-single .blog-post-author-info h3 span {
           display: inline-block;
           font-weight: 400; }
-        #blog-content .blog-posts-single .blog-post-author-info h3:nth-of-type(4) {
+        #blog-content .blog-posts-single .blog-post-author-info h3:nth-of-type(1) {
+          color: #FC4FA0; }
+        #blog-content .blog-posts-single .blog-post-author-info h3:nth-of-type(2) {
+          color: #FF9100; }
+        #blog-content .blog-posts-single .blog-post-author-info h3:nth-of-type(3) {
           color: #FFD400; }
+        #blog-content .blog-posts-single .blog-post-author-info h3:nth-of-type(4) {
+          color: #0091FF; }
       #blog-content .blog-posts-single .blog-post-author-info i {
         line-height: .5rem; }
+      #blog-content .blog-posts-single .blog-post-author-info .featured-song {
+        display: none; }
     #blog-content .blog-posts-single iframe {
       margin: 10px 0px; }
-    #blog-content .blog-posts-single .blog-post-post-tags-container {
+    #blog-content .blog-posts-single .blog-post-tags .blog-post-tags-container {
       display: flex;
       align-items: center;
       flex-flow: row wrap;
       text-transform: lowercase; }
-      #blog-content .blog-posts-single .blog-post-post-tags-container h3 {
+      #blog-content .blog-posts-single .blog-post-tags .blog-post-tags-container h3 {
         margin: 0; }
-      #blog-content .blog-posts-single .blog-post-post-tags-container a:link,
-      #blog-content .blog-posts-single .blog-post-post-tags-container a:visited {
+      #blog-content .blog-posts-single .blog-post-tags .blog-post-tags-container a:link,
+      #blog-content .blog-posts-single .blog-post-tags .blog-post-tags-container a:visited {
+        background: #FC4FA0;
         color: #0D070D;
         font-weight: 900;
         margin: 5px;
         padding: 5px;
         text-decoration: none;
         text-transform: lowercase; }
-        #blog-content .blog-posts-single .blog-post-post-tags-container a:link:nth-of-type(even),
-        #blog-content .blog-posts-single .blog-post-post-tags-container a:visited:nth-of-type(even) {
-          background: #D90368; }
-          #blog-content .blog-posts-single .blog-post-post-tags-container a:link:nth-of-type(even):hover,
-          #blog-content .blog-posts-single .blog-post-post-tags-container a:visited:nth-of-type(even):hover {
-            background: #0091FF;
-            transition: 1s background-color; }
-        #blog-content .blog-posts-single .blog-post-post-tags-container a:link:nth-of-type(odd),
-        #blog-content .blog-posts-single .blog-post-post-tags-container a:visited:nth-of-type(odd) {
+        #blog-content .blog-posts-single .blog-post-tags .blog-post-tags-container a:link:nth-of-type(2n+1),
+        #blog-content .blog-posts-single .blog-post-tags .blog-post-tags-container a:visited:nth-of-type(2n+1) {
+          background: #0091FF; }
+        #blog-content .blog-posts-single .blog-post-tags .blog-post-tags-container a:link:nth-of-type(3n+1),
+        #blog-content .blog-posts-single .blog-post-tags .blog-post-tags-container a:visited:nth-of-type(3n+1) {
+          background: #FC4FA0; }
+        #blog-content .blog-posts-single .blog-post-tags .blog-post-tags-container a:link:nth-of-type(4n+1),
+        #blog-content .blog-posts-single .blog-post-tags .blog-post-tags-container a:visited:nth-of-type(4n+1) {
           background: #FFD400; }
-          #blog-content .blog-posts-single .blog-post-post-tags-container a:link:nth-of-type(odd):hover,
-          #blog-content .blog-posts-single .blog-post-post-tags-container a:visited:nth-of-type(odd):hover {
-            background: #0091FF;
-            transition: 1s background-color; }
+        #blog-content .blog-posts-single .blog-post-tags .blog-post-tags-container a:link:hover,
+        #blog-content .blog-posts-single .blog-post-tags .blog-post-tags-container a:visited:hover {
+          background: linear-gradient(to left, #D90368, #FFD400, #0091FF); }
 
 /* footer */
 footer {
@@ -425,7 +433,10 @@ footer {
   /* desktop blog posts */
   #blog-content {
     display: flex;
-    flex-flow: row nowrap; } }
+    flex-flow: row nowrap; }
+    #blog-content .blog-posts .blog-posts-single .blog-post-author-info .featured-song {
+      display: block;
+      margin-left: 50px; } }
 /* ==========================================================================
    Helper classes
    ========================================================================== */

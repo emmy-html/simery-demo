@@ -20,7 +20,7 @@
       no-repeat; 
     background-size:100% 5px ;/* if linear-gradient, we need to resize it */
 }
-@mixin tags-content {
+@mixin post-tags {
     display: flex;
     align-items: center;
     flex-flow: row wrap;
@@ -30,25 +30,24 @@
     }
     a:link,
     a:visited {
+        background: $soft-pink;
         color: $black;
         font-weight: $black-font;
         margin: 5px;
         padding: 5px;
         text-decoration: none;
         text-transform: lowercase;
-        &:nth-of-type(even) {
-            background: $pink;
-            &:hover {
-                background: $blue;
-                transition: 1s background-color;
-            }
+        &:nth-of-type(2n+1) {
+            background: $blue;
         }
-        &:nth-of-type(odd) {
+        &:nth-of-type(3n+1) {
+            background: $soft-pink;
+        }
+        &:nth-of-type(4n+1) {
             background: $yellow;
-            &:hover {
-                background: $blue;
-                transition: 1s background-color;
-            }
+        }
+        &:hover {
+            background: $pink-to-blue-gradient;
         }
     } 
 }
